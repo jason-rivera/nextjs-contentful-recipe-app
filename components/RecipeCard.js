@@ -9,8 +9,8 @@ const RecipeCard = ({ recipe }) => {
       <div className='featured'>
         <Image
           src={'https:' + thumbnail.fields.file.url}
-          width={thumbnail.fields.file.details.image.width}
-          height={thumbnail.fields.file.details.image.height}
+          width='600'
+          height='400'
         />
       </div>
       <div className='content'>
@@ -20,7 +20,7 @@ const RecipeCard = ({ recipe }) => {
         </div>
         <div className='actions'>
           <Link href={'/recipes/' + slug}>
-            <a>Cook this</a>
+            <div className='cook-btn'>Cook this</div>
           </Link>
         </div>
       </div>
@@ -53,7 +53,7 @@ const RecipeCard = ({ recipe }) => {
           display: flex;
           justify-content: flex-end;
         }
-        .actions a {
+        .cook-btn {
           color: #fff;
           background: #f01b29;
           padding: 16px 24px;
