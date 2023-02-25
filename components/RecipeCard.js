@@ -19,7 +19,7 @@ const RecipeCard = ({ recipe }) => {
           <p>Takes approx {cookingTime} mins to make</p>
         </div>
         <div className='actions'>
-          <Link href={'/recipes/' + slug}>
+          <Link href={'/recipes/' + slug} passHref>
             <div className='cook-btn'>Cook this</div>
           </Link>
         </div>
