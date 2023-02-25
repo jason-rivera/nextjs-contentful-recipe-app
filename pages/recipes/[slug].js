@@ -40,11 +40,9 @@ export const getStaticProps = async (context) => {
 export default function RecipeDetails({ recipe }) {
   const { featuredImage, title, cookingTime, ingredients, method } =
     recipe.fields;
-  console.log(recipe);
 
   return (
     <div>
-      Recipe Details
       <div className='banner'>
         <Image
           src={'https:' + featuredImage.fields.file.url}
