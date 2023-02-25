@@ -2,6 +2,7 @@ import { createClient } from 'contentful';
 import Image from 'next/image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Skeleton from '../../components/Skeleton';
+import { useRouter } from 'next/router';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -30,6 +31,15 @@ export const getStaticProps = async (context) => {
     content_type: 'recipe',
     'fields.slug': context.params.slug,
   });
+
+  if (!res.items.length) {
+    return {
+      redirect: {
+        desitination: '/',
+        permanent: false,
+      },
+    };
+  }
 
   return {
     props: {
