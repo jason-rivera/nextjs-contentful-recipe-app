@@ -6,8 +6,8 @@ export default function Layout({ children }) {
       <header>
         <Link href='/'>
           <h1>
-            <span>Just Add</span>
-            <span>Marmite</span>
+            <span>Jason's Classic</span>
+            <span>RECIPES</span>
           </h1>
           <h2>Spread The Joy</h2>
         </Link>
@@ -16,7 +16,7 @@ export default function Layout({ children }) {
       <div className='page-content'>{children}</div>
 
       <footer>
-        <p>Copyright 2023 Just Add Marmite :)</p>
+        <p>Copyright 2023 - Jason Rivera</p>
       </footer>
     </div>
   );
