@@ -62,6 +62,7 @@ export default function RecipeDetails({ recipe }) {
           src={'https:' + featuredImage.fields.file.url}
           width={featuredImage.fields.file.details.image.width}
           height={featuredImage.fields.file.details.image.height}
+          layout='responsive'
         />
         <h2>{title}</h2>
       </div>
@@ -81,6 +82,9 @@ export default function RecipeDetails({ recipe }) {
         h2,
         h3 {
           text-transform: uppercase;
+        }
+        .banner {
+          text-align: center;
         }
         .banner h2 {
           margin: 0;
