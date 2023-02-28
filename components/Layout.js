@@ -16,7 +16,7 @@ export default function Layout({ children }) {
       <div className='page-content'>{children}</div>
 
       <footer>
-        <p>Copyright 2023 - Jason Rivera</p>
+        <p>Jason's Classic Recipes 2023 ©</p>
       </footer>
     </div>
   );

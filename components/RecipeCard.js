@@ -9,8 +9,9 @@ const RecipeCard = ({ recipe }) => {
       <div className='featured'>
         <Image
           src={'https:' + thumbnail.fields.file.url}
-          width='600'
-          height='400'
+          width={thumbnail.fields.file.details.image.width}
+          height={thumbnail.fields.file.details.image.height}
+          layout='responsive'
           alt={title}
         />
       </div>
