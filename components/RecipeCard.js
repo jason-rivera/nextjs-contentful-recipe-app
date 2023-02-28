@@ -20,8 +20,10 @@ const RecipeCard = ({ recipe }) => {
           <p>Takes approx {cookingTime} mins to make</p>
         </div>
         <div className='actions'>
-          <Link href={'/recipes/' + slug} passHref>
-            <div className='cook-btn'>Cook this</div>
+          <Link legacyBehavior href={'/recipes/' + slug} passHref>
+            <a>
+              <div className='cook-btn'>Cook this</div>
+            </a>
           </Link>
         </div>
       </div>
@@ -58,6 +60,9 @@ const RecipeCard = ({ recipe }) => {
           color: #fff;
           background: #f01b29;
           padding: 16px 24px;
+        }
+
+        a {
           text-decoration: none;
         }
       `}</style>
